@@ -1,15 +1,15 @@
-const { log } = require("console");
-const fs = require("fs");
-const DB_FILE_PATH = "./core/database";
+import fs from "fs"; // ES6
+// const fs = require("fs"); - CommonJS
+const DB_FILE_PATH = "./core/db";
 
-console.log("[CRUDzeira]");
+console.log("[CRUD]");
 
 function create(content: string) {
-  //save content to the database
+  // salvar o content no sistema
   fs.writeFileSync(DB_FILE_PATH, content);
-
   return content;
 }
 
-// Simulate creation
-console.log(create("tmj junto papai"));
+
+// [SIMULATION]
+console.log(create("Bora filhao"));
