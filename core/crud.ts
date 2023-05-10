@@ -4,13 +4,21 @@ const DB_FILE_PATH = "./core/database";
 
 console.log("[CRUD]");
 
+interface Todo {
+  date: string;
+  content: string;
+  done?: boolean;
+}
+
 function create(content: string) {
   const todo = {
     date: new Date().toISOString(),
     content: content,
+    done: false,
   };
 
-  const todos = [
+  const todos: Array<Todo> = [
+    ...read(),
     todo, 
   ]
 
@@ -20,11 +28,24 @@ function create(content: string) {
   return content;
 }
 
-function read() {
+function read(): Array<Todo> {
   // ler o conteúdo do sistema
-  return fs.readFileSync(DB_FILE_PATH, "utf-8");
+  const databaseString =  fs.readFileSync(DB_FILE_PATH, "utf-8");
+  const database = JSON.parse(databaseString || "{}");
+
+  if (!database.todos) {
+    return [];
+  }
+
+  return database.todos;
+}
+
+function CLEAR_DATABASE() {
+  fs.writeFileSync(DB_FILE_PATH, "");
 }
 
 // [SIMULATION]
-create("Hello World");
+CLEAR_DATABASE();
+create("beber água");
+create("ler livro");
 console.log(read());
