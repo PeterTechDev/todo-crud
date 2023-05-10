@@ -1,6 +1,6 @@
 import { log } from "console";
 import fs from "fs"; // ES6
-import { v4 as uuidv } from 'uuid';
+import { v4 as uuidv } from "uuid";
 // const fs = require("fs"); - CommonJS
 const DB_FILE_PATH = "./core/database";
 
@@ -13,7 +13,7 @@ interface Todo {
   done?: boolean;
 }
 
-function create(content: string) : Todo {
+function create(content: string): Todo {
   const todo = {
     id: uuidv(),
     date: new Date().toISOString(),
@@ -21,18 +21,24 @@ function create(content: string) : Todo {
     done: false,
   };
 
-  const todos = (typeof read() === 'undefined') ?
-  [todo] : [...read(), todo]
+  const todos = typeof read() === "undefined" ? [todo] : [...read(), todo];
 
-  fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
-    todos,
-  }, null, 2));
+  fs.writeFileSync(
+    DB_FILE_PATH,
+    JSON.stringify(
+      {
+        todos,
+      },
+      null,
+      2
+    )
+  );
   return todo;
 }
 
 function read(): Array<Todo> {
   // ler o conteúdo do sistema
-  const databaseString =  fs.readFileSync(DB_FILE_PATH, "utf-8");
+  const databaseString = fs.readFileSync(DB_FILE_PATH, "utf-8");
   const database = JSON.parse(databaseString || "{}");
 
   if (!database.todos) {
@@ -53,9 +59,16 @@ function update(id: string, partialTodo: Partial<Todo>): Todo {
     }
   });
 
-  fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
-    todos,
-  }, null, 2));
+  fs.writeFileSync(
+    DB_FILE_PATH,
+    JSON.stringify(
+      {
+        todos,
+      },
+      null,
+      2
+    )
+  );
 
   if (!updatedTodo) {
     throw new Error("Todo not found");
@@ -64,9 +77,32 @@ function update(id: string, partialTodo: Partial<Todo>): Todo {
   return updatedTodo;
 }
 
+function deleteById(id: string): void {
+  const todos = read();
+
+  const todosWithoutOne = todos.filter((todo) => {
+    if (id === todo.id) {
+      return false;
+    }
+    return true;
+  });
+
+  fs.writeFileSync(
+    DB_FILE_PATH,
+    JSON.stringify(
+      {
+        todos,
+      },
+      null,
+      2
+    )
+  );
+}
+
 function CLEAR_DATABASE() {
   fs.writeFileSync(DB_FILE_PATH, "");
 }
+
 
 // [SIMULATION]
 CLEAR_DATABASE();
