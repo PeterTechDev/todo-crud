@@ -21,9 +21,11 @@
   "homepage": "https://github.com/PeterTechDev/todo-crud#readme",
   "devDependencies": {
     "@types/node": "^20.1.0",
+    "@types/uuid": "^9.0.1",
     "nodemon": "^2.0.21"
   },
   "dependencies": {
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "uuid": "^9.0.0"
   }
 }
