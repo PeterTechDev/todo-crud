@@ -13,7 +13,7 @@ interface Todo {
   done?: boolean;
 }
 
-function create(content: string) {
+function create(content: string) : Todo {
   const todo = {
     id: uuidv(),
     date: new Date().toISOString(),
@@ -21,15 +21,13 @@ function create(content: string) {
     done: false,
   };
 
-  const todos: Array<Todo> = [
-    ...read(),
-    todo, 
-  ]
+  const todos = (typeof read() === 'undefined') ?
+  [todo] : [...read(), todo]
 
   fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
     todos,
   }, null, 2));
-  return content;
+  return todo;
 }
 
 function read(): Array<Todo> {
@@ -54,6 +52,7 @@ function update(id: string, partialTodo: Partial<Todo>): Todo {
       updatedTodo = Object.assign(currentTodo, partialTodo);
     }
   });
+
   fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
     todos,
   }, null, 2));
@@ -74,7 +73,7 @@ CLEAR_DATABASE();
 create("beber água");
 create("ler livro");
 const thirdTodo = create("comer bolo");
-console.log(thirdTodo.);
+console.log(thirdTodo.id);
 
 update(thirdTodo.id, {
   content: "comer bolo de chocolate",
