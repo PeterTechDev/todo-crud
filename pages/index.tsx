@@ -10,11 +10,12 @@ interface HomeTodo {
 }
 
 function HomePage() {
+  const [page, setPage] = React.useState(1);
   const [todos, setTodos] = React.useState<HomeTodo[]>([]);
 
   // Load infos onload
   React.useEffect(() => {
-    todoController.get().then((todos) => {
+    todoController.get({ page }).then(({ todos }) => {
       setTodos(todos);
     });
   }, []);
@@ -83,7 +84,7 @@ function HomePage() {
               </td>
             </tr> */}
 
-            {/* <tr>
+            <tr>
               <td colSpan={4} align="center" style={{ textAlign: "center" }}>
                 <button data-type="load-more">
                   Carregar mais{" "}
@@ -98,7 +99,7 @@ function HomePage() {
                   </span>
                 </button>
               </td>
-            </tr> */}
+            </tr>
           </tbody>
         </table>
       </section>
