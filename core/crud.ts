@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { log } from "console";
 import fs from "fs"; // ES6
 import { v4 as uuidv } from "uuid";
@@ -103,16 +104,15 @@ function CLEAR_DATABASE() {
   fs.writeFileSync(DB_FILE_PATH, "");
 }
 
-
 // [SIMULATION]
 CLEAR_DATABASE();
 create("beber água");
 create("ler livro");
 const thirdTodo = create("comer bolo");
-console.log(thirdTodo.id);
+// console.log(thirdTodo.id);
 
 update(thirdTodo.id, {
   content: "comer bolo de chocolate",
   done: true,
 });
-console.log(read());
+// console.log(read());
