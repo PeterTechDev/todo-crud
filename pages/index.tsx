@@ -1,9 +1,16 @@
+import React from "react";
+// import { GlobalStyles } from "../src/ui/theme/GlobalStyles";
+import { GlobalStyles } from "@ui/theme/GlobalStyles";
+
+const bg = "https://i.imgur.com/H5uNrX0.png";
+
 export default function Page() {
   return (
     <main>
+      <GlobalStyles themeName="indigo" />
       <header
         style={{
-          //  backgroundImage: `url('${bg}')`,
+          backgroundImage: `url('${bg}')`,
         }}
       >
         <div className="typewriter">
