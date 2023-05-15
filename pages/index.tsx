@@ -4,6 +4,21 @@ import { todoController } from "@ui/controller/todo";
 
 const bg = "https://i.imgur.com/H5uNrX0.png";
 
+const todos = [
+  {
+    id: "5550a88a-50ca-448f-bbb0-c1480ee81f23",
+    date: "2023-03-27T00:07:51.718Z",
+    content: "Primeira TODO",
+    done: false,
+  },
+  {
+    id: "ae800f92-2993-4278-9b1c-917da9c459b7",
+    date: "2023-03-27T00:07:51.718Z",
+    content: "Atualizada!",
+    done: false,
+  },
+];
+
 interface HomeTodo {
   id: string;
   content: string;
@@ -86,8 +101,8 @@ function HomePage() {
 
             <tr>
               <td colSpan={4} align="center" style={{ textAlign: "center" }}>
-                <button data-type="load-more">
-                  Carregar mais{" "}
+                <button data-type="load-more" onClick={() => setPage(page + 1)}>
+                  Página {page}, Carregar mais{" "}
                   <span
                     style={{
                       display: "inline-block",
