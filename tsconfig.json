@@ -22,7 +22,10 @@
     "paths": {
       "@ui/*": [
         "src/ui/*"
-      ]
+      ],
+      "@database-crud-todo": [
+        "core/crud.ts"
+      ],
     }
   },
   "include": [
