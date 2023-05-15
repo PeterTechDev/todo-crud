@@ -4,5 +4,7 @@ export default function handler(
   request: NextApiRequest,
   response: NextApiResponse
 ) {
-  response.status(200).json({ name: "LeBron James" });
+  // eslint-disable-next-line no-console
+  console.log(request.headers);
+  response.status(200).json({ message: "Olá mundo!" });
 }

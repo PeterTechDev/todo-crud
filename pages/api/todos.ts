@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { read } from "@database-crud-todo";
 import { todoController } from "@server/controller/todo";
 
 export default function handler(
