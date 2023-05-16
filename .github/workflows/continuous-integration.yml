@@ -15,7 +15,7 @@ jobs:
       - name: "Debug"
         run: |
           ls -la
-          echo "Segundo comando de debug"
+          echo "Testando comando de debug"
       - name: "Install Dependencies"
         run: "npm install"
       - name: "Lint"
