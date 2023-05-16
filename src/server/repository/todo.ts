@@ -52,6 +52,7 @@ async function toggleDone(id: string): Promise<Todo> {
 export const todoRepository = {
   get,
   createByContent,
+  toggleDone,
 };
 
 // Model/Schema
