@@ -1,6 +1,6 @@
-import { todoRepository } from "@server/repository/todo";
 import { NextApiRequest, NextApiResponse } from "next";
 import { z as schema } from "zod";
+import { todoRepository } from "@server/repository/todo";
 
 async function get(req: NextApiRequest, res: NextApiResponse) {
   const query = req.query;
