@@ -6,7 +6,7 @@ interface TodoControllerGetParams {
   page: number;
 }
 async function get(params: TodoControllerGetParams) {
-  // TODO: Fazer a lógica de pegar os dados
+  // Fazer a lógica de pegar os dados
   return todoRepository.get({
     page: params.page,
     limit: 2,
