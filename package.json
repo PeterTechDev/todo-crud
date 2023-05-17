@@ -1,57 +1,54 @@
 {
-  "name": "todo-crud",
+  "name": "aulas-crudcomqualidade.io",
   "version": "1.0.0",
-  "description": "Project creating high-quality CRUD operations.",
+  "description": "Projeto criando um CRUD com qualidade!",
   "main": "index.js",
   "scripts": {
     "start:crud": "npx ts-node ./core/crud.ts",
-    "dev:crud": "nodemon --ext ts,tsx --exec \"npm run start:crud\"",
+    "dev:crud": "nodemon --ext ts,tsx --exec 'npm run start:crud'",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint \"./**/*.{jsx,jsx,ts,tsx}\"",
-    "lint:fix": "eslint \"./**/*.{jsx,jsx,ts,tsx}\" --fix",
+    "lint:fix": "npm run lint -- --fix",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test": "start-server-and-test dev http://localhost:3000 cy:run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PeterTechDev/todo-crud.git"
+    "url": "git+https://github.com/devsoutinho/aulas-crudcomqualidade.io.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PeterTechDev/todo-crud/issues"
+    "url": "https://github.com/devsoutinho/aulas-crudcomqualidade.io/issues"
   },
-  "homepage": "https://github.com/PeterTechDev/todo-crud#readme",
+  "homepage": "https://github.com/devsoutinho/aulas-crudcomqualidade.io#readme",
   "devDependencies": {
-    "@types/node": "^20.1.0",
-    "@types/react": "18.2.6",
+    "@types/node": "^18.15.5",
+    "@types/react": "18.0.29",
     "@types/uuid": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "cypress": "^12.12.0",
+    "cypress": "^12.9.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-chai-friendly": "^0.7.2",
-    "eslint-plugin-cypress": "^2.13.3",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-no-only-tests": "^3.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "nodemon": "^2.0.21",
     "prettier": "^2.8.7",
-    "start-server-and-test": "^2.0.0",
-    "zod": "^3.21.4"
+    "start-server-and-test": "^2.0.0"
   },
   "dependencies": {
-    "next": "^13.4.1",
+    "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.0.4",
-    "uuid": "^9.0.0"
+    "typescript": "^5.0.2",
+    "uuid": "^9.0.0",
+    "zod": "^3.21.4"
   }
 }

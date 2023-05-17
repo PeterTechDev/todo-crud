@@ -2,6 +2,7 @@ import React from "react";
 import { GlobalStyles } from "@ui/theme/GlobalStyles";
 import { todoController } from "@ui/controller/todo";
 
+// const bg = "https://mariosouto.com/cursos/crudcomqualidade/bg";
 const bg = "/bg.jpeg"; // inside public folder
 
 interface HomeTodo {
@@ -43,7 +44,7 @@ function HomePage() {
 
   return (
     <main>
-      <GlobalStyles themeName="indigo" />
+      <GlobalStyles themeName="devsoutinho" />
       <header
         style={{
           backgroundImage: `url('${bg}')`,
@@ -75,7 +76,6 @@ function HomePage() {
           }}
         >
           <input
-            name="add-todo"
             type="text"
             placeholder="Correr, Estudar..."
             value={newTodoContent}
