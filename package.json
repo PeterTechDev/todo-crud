@@ -1,7 +1,7 @@
 {
-  "name": "aulas-crudcomqualidade.io",
+  "name": "crud-react-ts-supabase",
   "version": "1.0.0",
-  "description": "Projeto criando um CRUD com qualidade!",
+  "description": "Projeto criando um crud com react, typescript e supabase!",
   "main": "index.js",
   "scripts": {
     "start:crud": "npx ts-node ./core/crud.ts",
@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devsoutinho/aulas-crudcomqualidade.io.git"
+    "url": "git+https://github.com/PeterTechDev/todo-crud"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/devsoutinho/aulas-crudcomqualidade.io/issues"
+    "url": "https://github.com/PeterTechDev/todo-crud/issues"
   },
-  "homepage": "https://github.com/devsoutinho/aulas-crudcomqualidade.io#readme",
+  "homepage": "https://github.com/PeterTechDev/todo-crudo#readme",
   "devDependencies": {
     "@types/node": "^18.15.5",
     "@types/react": "18.0.29",
@@ -34,8 +34,11 @@
     "cypress": "^12.9.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.13.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-no-only-tests": "^3.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
@@ -44,6 +47,7 @@
     "start-server-and-test": "^2.0.0"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.22.0",
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
