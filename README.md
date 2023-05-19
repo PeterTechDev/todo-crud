@@ -4,10 +4,11 @@ Este é um projeto de uma lista de tarefas (TODO list) desenvolvido para pratica
 
 ## Funcionalidades
 
-- Adicionar tarefas à lista
-- Marcar tarefas como concluídas
-- Editar tarefas existentes
-- Excluir tarefas da lista
+- [x] Adicionar tarefas à lista
+- [x] Marcar tarefas como concluídas
+- [ ] Editar tarefas existentes
+- [x] Excluir tarefas da lista
+
 
 ## Demonstração
 
@@ -20,21 +21,21 @@ Uma demonstração do projeto está disponível [aqui](https://todo-crud-98u0zgu
 
 Certifique-se de ter os seguintes itens instalados antes de executar o projeto:
 
-- Node.js (versão X.X.X ou superior)
-- npm (versão X.X.X ou superior)
+- Node.js (versão 16 ou superior)
+- npm (versão 8 ou superior)
 
 ## Instalação
 
 1. Clone o repositório do projeto:
 
    ```shell
-   git clone https://github.com/seu-usuario/todo-list.git
+   git clone git@github.com:PeterTechDev/todo-crud.git
    ```
 
 2. Navegue até o diretório do projeto:
 
    ```shell
-   cd todo-list
+   cd todo-crud
    ```
 
 3. Instale as dependências:
@@ -49,7 +50,7 @@ Certifique-se de ter os seguintes itens instalados antes de executar o projeto:
 Após concluir a instalação e configuração, você pode iniciar o projeto localmente. Execute o seguinte comando:
 
 ```shell
-npm start
+npm run dev
 ```
 
 Isso iniciará a aplicação em modo de desenvolvimento. Abra o seu navegador e visite [http://localhost:3000](http://localhost:3000) para visualizar o projeto em execução.
