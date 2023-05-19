@@ -12,7 +12,7 @@ Este é um projeto de uma lista de tarefas (TODO list) desenvolvido para pratica
 
 ## Demonstração
 
-Uma demonstração do projeto está disponível [aqui](https://todo-crud-98u0zgu6d-petertechdev.vercel.app/). Sinta-se à vontade para experimentar e testar as funcionalidades.
+Uma demonstração do projeto está disponível <a target="_blank" href="https://todo-crud-98u0zgu6d-petertechdev.vercel.app/">aqui</a>. Sinta-se à vontade para experimentar e testar as funcionalidades.
 ![Descrição da imagem](https://i.imgur.com/jjEgCOm.png)
 
 
