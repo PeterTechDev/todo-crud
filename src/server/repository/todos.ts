@@ -1,4 +1,4 @@
-import { read } from "@db-crud-todo";
+import { read } from "core/crud";
 import { NextApiRequest, NextApiResponse } from "next";
 
 function get(_: NextApiRequest, res: NextApiResponse) {
